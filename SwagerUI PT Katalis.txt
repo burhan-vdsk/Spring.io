@@ -1,0 +1,1040 @@
+
+employee-controller
+
+GET
+​/api​/employee​/id​/{id}
+
+Parameters
+Try it out
+Name	Description
+id *
+string($uuid)
+(path)	
+id
+Responses
+Code	Description	Links
+200	
+OK
+
+Media type
+
+Controls Accept header.
+Example Value
+Schema
+{
+  "id": "string",
+  "name": "string",
+  "number": "string",
+  "biometricNumber": "string",
+  "title": "string",
+  "workStart": "2020-09-01",
+  "workEnd": "2020-09-01",
+  "workEndReason": "string",
+  "baseSalaryIdx": 0,
+  "baseSalary": 0,
+  "dailySalary": 0,
+  "bpjsSalary": 0,
+  "mealExtra": 0,
+  "titleExtra": 0,
+  "jstExtra": 0,
+  "bpjsExtra": 0,
+  "incentiveExtra": 0,
+  "miscExtra": 0,
+  "mealCharge": 0,
+  "jstCharge": 0,
+  "bpjsCharge": 0,
+  "fineCharge": 0,
+  "loanCharge": 0,
+  "miscCharge": 0,
+  "bankAccountNumber": "string",
+  "bankAccountName": "string",
+  "nik": "string",
+  "address": "string",
+  "role": "string",
+  "active": true,
+  "branch": "string",
+  "branchId": "string"
+}
+-----------------------------------------------------------------------------------------------
+
+POST
+​/api​/employee​/delete​/{id}
+Parameters
+Try it out
+Name	Description
+id *
+string($uuid)
+(path)	
+id
+Responses
+Code	Description	Links
+200	
+OK
+
+Media type
+
+Controls Accept header.
+Example Value
+Schema
+{
+  "message": "string",
+  "count": 0
+}
+--------------------------------------------------------------------------------------------------
+
+POST
+​/api​/employee​/save
+Parameters
+Try it out
+No parameters
+
+Request body
+
+Example Value
+Schema
+{
+  "id": "string",
+  "name": "string",
+  "number": "string",
+  "biometricNumber": "string",
+  "title": "string",
+  "workStart": "2020-09-01",
+  "workEnd": "2020-09-01",
+  "workEndReason": "string",
+  "baseSalaryIdx": 0,
+  "baseSalary": 0,
+  "dailySalary": 0,
+  "bpjsSalary": 0,
+  "mealExtra": 0,
+  "titleExtra": 0,
+  "jstExtra": 0,
+  "bpjsExtra": 0,
+  "incentiveExtra": 0,
+  "miscExtra": 0,
+  "mealCharge": 0,
+  "jstCharge": 0,
+  "bpjsCharge": 0,
+  "fineCharge": 0,
+  "loanCharge": 0,
+  "miscCharge": 0,
+  "bankAccountNumber": "string",
+  "bankAccountName": "string",
+  "nik": "string",
+  "address": "string",
+  "role": "string",
+  "active": true,
+  "branch": "string",
+  "branchId": "string"
+}
+Responses
+Code	Description	Links
+200	
+OK
+
+Media type
+
+Controls Accept header.
+Example Value
+Schema
+{
+  "id": "string",
+  "name": "string",
+  "number": "string",
+  "biometricNumber": "string",
+  "title": "string",
+  "workStart": "2020-09-01",
+  "workEnd": "2020-09-01",
+  "workEndReason": "string",
+  "baseSalaryIdx": 0,
+  "baseSalary": 0,
+  "dailySalary": 0,
+  "bpjsSalary": 0,
+  "mealExtra": 0,
+  "titleExtra": 0,
+  "jstExtra": 0,
+  "bpjsExtra": 0,
+  "incentiveExtra": 0,
+  "miscExtra": 0,
+  "mealCharge": 0,
+  "jstCharge": 0,
+  "bpjsCharge": 0,
+  "fineCharge": 0,
+  "loanCharge": 0,
+  "miscCharge": 0,
+  "bankAccountNumber": "string",
+  "bankAccountName": "string",
+  "nik": "string",
+  "address": "string",
+  "role": "string",
+  "active": true,
+  "branch": "string",
+  "branchId": "string"
+}
+--------------------------------------------------------------------------------------------------
+
+GET
+​/api​/employee​/search​/{keyword}​/sort​/{sortColumn}​/{sortMode}​/page​/{page}​/{size}
+Parameters
+Try it out
+Name	Description
+keyword *
+string
+(path)	
+keyword
+branchId *
+string($uuid)
+(path)	
+branchId
+sortColumn *
+string
+(path)	
+Available values : NAME, NUMBER, BIOMETRIC_NUMBER, TITLE, WORK_START, WORK_END, WORK_END_REASON, BASE_SALARY_IDX, BASE_SALARY, DAILY_SALARY, BPJS_SALARY, MEAL_EXTRA, TITLE_EXTRA, JST_EXTRA, BPJS_EXTRA, INCENTIVE_EXTRA, MISC_EXTRA, MEAL_CHARGE, JST_CHARGE, BPJS_CHARGE, FINE_CHARGE, LOAN_CHARGE, MISC_CHARGE, BANK_ACCOUNT_NUMBER, BANK_ACCOUNT_NAME, NIK, ADDRESS, ROLE, ACTIVE, BRANCH
+
+
+sortMode *
+string
+(path)	
+Available values : asc, desc
+
+
+page *
+integer($int32)
+(path)	
+page
+size *
+integer($int32)
+(path)	
+size
+Responses
+Code	Description	Links
+200	
+OK
+
+Media type
+
+Controls Accept header.
+Example Value
+Schema
+{
+  "totalPages": 0,
+  "totalElements": 0,
+  "elements": [
+    {
+      "id": "string",
+      "name": "string",
+      "number": "string",
+      "biometricNumber": "string",
+      "title": "string",
+      "workStart": "2020-09-01",
+      "workEnd": "2020-09-01",
+      "workEndReason": "string",
+      "baseSalaryIdx": 0,
+      "baseSalary": 0,
+      "dailySalary": 0,
+      "bpjsSalary": 0,
+      "mealExtra": 0,
+      "titleExtra": 0,
+      "jstExtra": 0,
+      "bpjsExtra": 0,
+      "incentiveExtra": 0,
+      "miscExtra": 0,
+      "mealCharge": 0,
+      "jstCharge": 0,
+      "bpjsCharge": 0,
+      "fineCharge": 0,
+      "loanCharge": 0,
+      "miscCharge": 0,
+      "bankAccountNumber": "string",
+      "bankAccountName": "string",
+      "nik": "string",
+      "address": "string",
+      "role": "string",
+      "active": true,
+      "branch": "string",
+      "branchId": "string"
+    }
+  ]
+}
+No links
+--------------------------------------------------------------------------------------------------
+GET
+​/api​/employee​/all​/sort​/{sortColumn}​/{sortMode}​/page​/{page}​/{size}
+Parameters
+Try it out
+Name	Description
+keyword *
+string
+(path)	
+keyword
+branchId *
+string($uuid)
+(path)	
+branchId
+sortColumn *
+string
+(path)	
+Available values : NAME, NUMBER, BIOMETRIC_NUMBER, TITLE, WORK_START, WORK_END, WORK_END_REASON, BASE_SALARY_IDX, BASE_SALARY, DAILY_SALARY, BPJS_SALARY, MEAL_EXTRA, TITLE_EXTRA, JST_EXTRA, BPJS_EXTRA, INCENTIVE_EXTRA, MISC_EXTRA, MEAL_CHARGE, JST_CHARGE, BPJS_CHARGE, FINE_CHARGE, LOAN_CHARGE, MISC_CHARGE, BANK_ACCOUNT_NUMBER, BANK_ACCOUNT_NAME, NIK, ADDRESS, ROLE, ACTIVE, BRANCH
+
+
+sortMode *
+string
+(path)	
+Available values : asc, desc
+
+
+page *
+integer($int32)
+(path)	
+page
+size *
+integer($int32)
+(path)	
+size
+Responses
+Code	Description	Links
+200	
+OK
+
+Media type
+
+Controls Accept header.
+Example Value
+Schema
+{
+  "totalPages": 0,
+  "totalElements": 0,
+  "elements": [
+    {
+      "id": "string",
+      "name": "string",
+      "number": "string",
+      "biometricNumber": "string",
+      "title": "string",
+      "workStart": "2020-09-01",
+      "workEnd": "2020-09-01",
+      "workEndReason": "string",
+      "baseSalaryIdx": 0,
+      "baseSalary": 0,
+      "dailySalary": 0,
+      "bpjsSalary": 0,
+      "mealExtra": 0,
+      "titleExtra": 0,
+      "jstExtra": 0,
+      "bpjsExtra": 0,
+      "incentiveExtra": 0,
+      "miscExtra": 0,
+      "mealCharge": 0,
+      "jstCharge": 0,
+      "bpjsCharge": 0,
+      "fineCharge": 0,
+      "loanCharge": 0,
+      "miscCharge": 0,
+      "bankAccountNumber": "string",
+      "bankAccountName": "string",
+      "nik": "string",
+      "address": "string",
+      "role": "string",
+      "active": true,
+      "branch": "string",
+      "branchId": "string"
+    }
+  ]
+}
+No links
+------------------------------------------------------------------------------------------------
+
+GET
+​/api​/employee​/all​/{page}​/{size}
+Parameters
+Try it out
+Name	Description
+keyword *
+string
+(path)	
+keyword
+branchId *
+string($uuid)
+(path)	
+branchId
+sortColumn *
+string
+(path)	
+Available values : NAME, NUMBER, BIOMETRIC_NUMBER, TITLE, WORK_START, WORK_END, WORK_END_REASON, BASE_SALARY_IDX, BASE_SALARY, DAILY_SALARY, BPJS_SALARY, MEAL_EXTRA, TITLE_EXTRA, JST_EXTRA, BPJS_EXTRA, INCENTIVE_EXTRA, MISC_EXTRA, MEAL_CHARGE, JST_CHARGE, BPJS_CHARGE, FINE_CHARGE, LOAN_CHARGE, MISC_CHARGE, BANK_ACCOUNT_NUMBER, BANK_ACCOUNT_NAME, NIK, ADDRESS, ROLE, ACTIVE, BRANCH
+
+
+sortMode *
+string
+(path)	
+Available values : asc, desc
+
+
+page *
+integer($int32)
+(path)	
+page
+size *
+integer($int32)
+(path)	
+size
+Responses
+Code	Description	Links
+200	
+OK
+
+Media type
+
+Controls Accept header.
+Example Value
+Schema
+{
+  "totalPages": 0,
+  "totalElements": 0,
+  "elements": [
+    {
+      "id": "string",
+      "name": "string",
+      "number": "string",
+      "biometricNumber": "string",
+      "title": "string",
+      "workStart": "2020-09-01",
+      "workEnd": "2020-09-01",
+      "workEndReason": "string",
+      "baseSalaryIdx": 0,
+      "baseSalary": 0,
+      "dailySalary": 0,
+      "bpjsSalary": 0,
+      "mealExtra": 0,
+      "titleExtra": 0,
+      "jstExtra": 0,
+      "bpjsExtra": 0,
+      "incentiveExtra": 0,
+      "miscExtra": 0,
+      "mealCharge": 0,
+      "jstCharge": 0,
+      "bpjsCharge": 0,
+      "fineCharge": 0,
+      "loanCharge": 0,
+      "miscCharge": 0,
+      "bankAccountNumber": "string",
+      "bankAccountName": "string",
+      "nik": "string",
+      "address": "string",
+      "role": "string",
+      "active": true,
+      "branch": "string",
+      "branchId": "string"
+    }
+  ]
+}
+No links
+-------------------------------------------------------------------------------------------------
+
+GET
+​/api​/employee​/all​/page​/{page}​/{size}
+Parameters
+Try it out
+Name	Description
+keyword *
+string
+(path)	
+keyword
+branchId *
+string($uuid)
+(path)	
+branchId
+sortColumn *
+string
+(path)	
+Available values : NAME, NUMBER, BIOMETRIC_NUMBER, TITLE, WORK_START, WORK_END, WORK_END_REASON, BASE_SALARY_IDX, BASE_SALARY, DAILY_SALARY, BPJS_SALARY, MEAL_EXTRA, TITLE_EXTRA, JST_EXTRA, BPJS_EXTRA, INCENTIVE_EXTRA, MISC_EXTRA, MEAL_CHARGE, JST_CHARGE, BPJS_CHARGE, FINE_CHARGE, LOAN_CHARGE, MISC_CHARGE, BANK_ACCOUNT_NUMBER, BANK_ACCOUNT_NAME, NIK, ADDRESS, ROLE, ACTIVE, BRANCH
+
+
+sortMode *
+string
+(path)	
+Available values : asc, desc
+
+
+page *
+integer($int32)
+(path)	
+page
+size *
+integer($int32)
+(path)	
+size
+Responses
+Code	Description	Links
+200	
+OK
+
+Media type
+
+Controls Accept header.
+Example Value
+Schema
+{
+  "totalPages": 0,
+  "totalElements": 0,
+  "elements": [
+    {
+      "id": "string",
+      "name": "string",
+      "number": "string",
+      "biometricNumber": "string",
+      "title": "string",
+      "workStart": "2020-09-01",
+      "workEnd": "2020-09-01",
+      "workEndReason": "string",
+      "baseSalaryIdx": 0,
+      "baseSalary": 0,
+      "dailySalary": 0,
+      "bpjsSalary": 0,
+      "mealExtra": 0,
+      "titleExtra": 0,
+      "jstExtra": 0,
+      "bpjsExtra": 0,
+      "incentiveExtra": 0,
+      "miscExtra": 0,
+      "mealCharge": 0,
+      "jstCharge": 0,
+      "bpjsCharge": 0,
+      "fineCharge": 0,
+      "loanCharge": 0,
+      "miscCharge": 0,
+      "bankAccountNumber": "string",
+      "bankAccountName": "string",
+      "nik": "string",
+      "address": "string",
+      "role": "string",
+      "active": true,
+      "branch": "string",
+      "branchId": "string"
+    }
+  ]
+}
+No links
+-------------------------------------------------------------------------------------------------
+
+GET
+​/api​/employee​/search​/{keyword}​/branch​/{branchId}​/sort​/{sortColumn}​/{sortMode}​/page​/{page}​/{size}
+Parameters
+Try it out
+Name	Description
+keyword *
+string
+(path)	
+keyword
+branchId *
+string($uuid)
+(path)	
+branchId
+sortColumn *
+string
+(path)	
+Available values : NAME, NUMBER, BIOMETRIC_NUMBER, TITLE, WORK_START, WORK_END, WORK_END_REASON, BASE_SALARY_IDX, BASE_SALARY, DAILY_SALARY, BPJS_SALARY, MEAL_EXTRA, TITLE_EXTRA, JST_EXTRA, BPJS_EXTRA, INCENTIVE_EXTRA, MISC_EXTRA, MEAL_CHARGE, JST_CHARGE, BPJS_CHARGE, FINE_CHARGE, LOAN_CHARGE, MISC_CHARGE, BANK_ACCOUNT_NUMBER, BANK_ACCOUNT_NAME, NIK, ADDRESS, ROLE, ACTIVE, BRANCH
+
+
+sortMode *
+string
+(path)	
+Available values : asc, desc
+
+
+page *
+integer($int32)
+(path)	
+page
+size *
+integer($int32)
+(path)	
+size
+Responses
+Code	Description	Links
+200	
+OK
+
+Media type
+
+Controls Accept header.
+Example Value
+Schema
+{
+  "totalPages": 0,
+  "totalElements": 0,
+  "elements": [
+    {
+      "id": "string",
+      "name": "string",
+      "number": "string",
+      "biometricNumber": "string",
+      "title": "string",
+      "workStart": "2020-09-01",
+      "workEnd": "2020-09-01",
+      "workEndReason": "string",
+      "baseSalaryIdx": 0,
+      "baseSalary": 0,
+      "dailySalary": 0,
+      "bpjsSalary": 0,
+      "mealExtra": 0,
+      "titleExtra": 0,
+      "jstExtra": 0,
+      "bpjsExtra": 0,
+      "incentiveExtra": 0,
+      "miscExtra": 0,
+      "mealCharge": 0,
+      "jstCharge": 0,
+      "bpjsCharge": 0,
+      "fineCharge": 0,
+      "loanCharge": 0,
+      "miscCharge": 0,
+      "bankAccountNumber": "string",
+      "bankAccountName": "string",
+      "nik": "string",
+      "address": "string",
+      "role": "string",
+      "active": true,
+      "branch": "string",
+      "branchId": "string"
+    }
+  ]
+}
+No links
+-------------------------------------------------------------------------------------------------
+
+GET
+​/api​/employee​/search​/{keyword}​/branch​/{branchId}​/page​/{page}​/{size}
+Parameters
+Try it out
+Name	Description
+keyword *
+string
+(path)	
+keyword
+branchId *
+string($uuid)
+(path)	
+branchId
+sortColumn *
+string
+(path)	
+Available values : NAME, NUMBER, BIOMETRIC_NUMBER, TITLE, WORK_START, WORK_END, WORK_END_REASON, BASE_SALARY_IDX, BASE_SALARY, DAILY_SALARY, BPJS_SALARY, MEAL_EXTRA, TITLE_EXTRA, JST_EXTRA, BPJS_EXTRA, INCENTIVE_EXTRA, MISC_EXTRA, MEAL_CHARGE, JST_CHARGE, BPJS_CHARGE, FINE_CHARGE, LOAN_CHARGE, MISC_CHARGE, BANK_ACCOUNT_NUMBER, BANK_ACCOUNT_NAME, NIK, ADDRESS, ROLE, ACTIVE, BRANCH
+
+
+sortMode *
+string
+(path)	
+Available values : asc, desc
+
+
+page *
+integer($int32)
+(path)	
+page
+size *
+integer($int32)
+(path)	
+size
+Responses
+Code	Description	Links
+200	
+OK
+
+Media type
+
+Controls Accept header.
+Example Value
+Schema
+{
+  "totalPages": 0,
+  "totalElements": 0,
+  "elements": [
+    {
+      "id": "string",
+      "name": "string",
+      "number": "string",
+      "biometricNumber": "string",
+      "title": "string",
+      "workStart": "2020-09-01",
+      "workEnd": "2020-09-01",
+      "workEndReason": "string",
+      "baseSalaryIdx": 0,
+      "baseSalary": 0,
+      "dailySalary": 0,
+      "bpjsSalary": 0,
+      "mealExtra": 0,
+      "titleExtra": 0,
+      "jstExtra": 0,
+      "bpjsExtra": 0,
+      "incentiveExtra": 0,
+      "miscExtra": 0,
+      "mealCharge": 0,
+      "jstCharge": 0,
+      "bpjsCharge": 0,
+      "fineCharge": 0,
+      "loanCharge": 0,
+      "miscCharge": 0,
+      "bankAccountNumber": "string",
+      "bankAccountName": "string",
+      "nik": "string",
+      "address": "string",
+      "role": "string",
+      "active": true,
+      "branch": "string",
+      "branchId": "string"
+    }
+  ]
+}
+No links
+-------------------------------------------------------------------------------------------------
+
+GET
+​/api​/employee​/all​/branch​/{branchId}​/sort​/{sortColumn}​/{sortMode}​/page​/{page}​/{size}
+Parameters
+Try it out
+Name	Description
+keyword *
+string
+(path)	
+keyword
+branchId *
+string($uuid)
+(path)	
+branchId
+sortColumn *
+string
+(path)	
+Available values : NAME, NUMBER, BIOMETRIC_NUMBER, TITLE, WORK_START, WORK_END, WORK_END_REASON, BASE_SALARY_IDX, BASE_SALARY, DAILY_SALARY, BPJS_SALARY, MEAL_EXTRA, TITLE_EXTRA, JST_EXTRA, BPJS_EXTRA, INCENTIVE_EXTRA, MISC_EXTRA, MEAL_CHARGE, JST_CHARGE, BPJS_CHARGE, FINE_CHARGE, LOAN_CHARGE, MISC_CHARGE, BANK_ACCOUNT_NUMBER, BANK_ACCOUNT_NAME, NIK, ADDRESS, ROLE, ACTIVE, BRANCH
+
+
+sortMode *
+string
+(path)	
+Available values : asc, desc
+
+
+page *
+integer($int32)
+(path)	
+page
+size *
+integer($int32)
+(path)	
+size
+Responses
+Code	Description	Links
+200	
+OK
+
+Media type
+
+Controls Accept header.
+Example Value
+Schema
+{
+  "totalPages": 0,
+  "totalElements": 0,
+  "elements": [
+    {
+      "id": "string",
+      "name": "string",
+      "number": "string",
+      "biometricNumber": "string",
+      "title": "string",
+      "workStart": "2020-09-01",
+      "workEnd": "2020-09-01",
+      "workEndReason": "string",
+      "baseSalaryIdx": 0,
+      "baseSalary": 0,
+      "dailySalary": 0,
+      "bpjsSalary": 0,
+      "mealExtra": 0,
+      "titleExtra": 0,
+      "jstExtra": 0,
+      "bpjsExtra": 0,
+      "incentiveExtra": 0,
+      "miscExtra": 0,
+      "mealCharge": 0,
+      "jstCharge": 0,
+      "bpjsCharge": 0,
+      "fineCharge": 0,
+      "loanCharge": 0,
+      "miscCharge": 0,
+      "bankAccountNumber": "string",
+      "bankAccountName": "string",
+      "nik": "string",
+      "address": "string",
+      "role": "string",
+      "active": true,
+      "branch": "string",
+      "branchId": "string"
+    }
+  ]
+}
+No links
+-------------------------------------------------------------------------------------------------
+
+GET
+​/api​/employee​/all​/branch​/{branchId}​/page​/{page}​/{size}
+Parameters
+Try it out
+Name	Description
+keyword *
+string
+(path)	
+keyword
+branchId *
+string($uuid)
+(path)	
+branchId
+sortColumn *
+string
+(path)	
+Available values : NAME, NUMBER, BIOMETRIC_NUMBER, TITLE, WORK_START, WORK_END, WORK_END_REASON, BASE_SALARY_IDX, BASE_SALARY, DAILY_SALARY, BPJS_SALARY, MEAL_EXTRA, TITLE_EXTRA, JST_EXTRA, BPJS_EXTRA, INCENTIVE_EXTRA, MISC_EXTRA, MEAL_CHARGE, JST_CHARGE, BPJS_CHARGE, FINE_CHARGE, LOAN_CHARGE, MISC_CHARGE, BANK_ACCOUNT_NUMBER, BANK_ACCOUNT_NAME, NIK, ADDRESS, ROLE, ACTIVE, BRANCH
+
+
+sortMode *
+string
+(path)	
+Available values : asc, desc
+
+
+page *
+integer($int32)
+(path)	
+page
+size *
+integer($int32)
+(path)	
+size
+Responses
+Code	Description	Links
+200	
+OK
+
+Media type
+
+Controls Accept header.
+Example Value
+Schema
+{
+  "totalPages": 0,
+  "totalElements": 0,
+  "elements": [
+    {
+      "id": "string",
+      "name": "string",
+      "number": "string",
+      "biometricNumber": "string",
+      "title": "string",
+      "workStart": "2020-09-01",
+      "workEnd": "2020-09-01",
+      "workEndReason": "string",
+      "baseSalaryIdx": 0,
+      "baseSalary": 0,
+      "dailySalary": 0,
+      "bpjsSalary": 0,
+      "mealExtra": 0,
+      "titleExtra": 0,
+      "jstExtra": 0,
+      "bpjsExtra": 0,
+      "incentiveExtra": 0,
+      "miscExtra": 0,
+      "mealCharge": 0,
+      "jstCharge": 0,
+      "bpjsCharge": 0,
+      "fineCharge": 0,
+      "loanCharge": 0,
+      "miscCharge": 0,
+      "bankAccountNumber": "string",
+      "bankAccountName": "string",
+      "nik": "string",
+      "address": "string",
+      "role": "string",
+      "active": true,
+      "branch": "string",
+      "branchId": "string"
+    }
+  ]
+}
+No links
+-------------------------------------------------------------------------------------------------
+
+PUT
+​/api​/employee​/edit​/{id}
+Parameters
+Try it out
+Name	Description
+id *
+string
+(path)	
+id
+Request body
+
+Example Value
+Schema
+{
+  "id": "string",
+  "name": "string",
+  "number": "string",
+  "biometricNumber": "string",
+  "title": "string",
+  "workStart": "2020-09-01",
+  "workEnd": "2020-09-01",
+  "workEndReason": "string",
+  "baseSalaryIdx": 0,
+  "baseSalary": 0,
+  "dailySalary": 0,
+  "bpjsSalary": 0,
+  "mealExtra": 0,
+  "titleExtra": 0,
+  "jstExtra": 0,
+  "bpjsExtra": 0,
+  "incentiveExtra": 0,
+  "miscExtra": 0,
+  "mealCharge": 0,
+  "jstCharge": 0,
+  "bpjsCharge": 0,
+  "fineCharge": 0,
+  "loanCharge": 0,
+  "miscCharge": 0,
+  "bankAccountNumber": "string",
+  "bankAccountName": "string",
+  "nik": "string",
+  "address": "string",
+  "role": "string",
+  "active": true,
+  "branch": "string",
+  "branchId": "string"
+}
+Responses
+Code	Description	Links
+200	
+OK
+
+Media type
+
+Controls Accept header.
+Example Value
+Schema
+{
+  "id": "string",
+  "name": "string",
+  "number": "string",
+  "biometricNumber": "string",
+  "title": "string",
+  "workStart": "2020-09-01",
+  "workEnd": "2020-09-01",
+  "workEndReason": "string",
+  "baseSalaryIdx": 0,
+  "baseSalary": 0,
+  "dailySalary": 0,
+  "bpjsSalary": 0,
+  "mealExtra": 0,
+  "titleExtra": 0,
+  "jstExtra": 0,
+  "bpjsExtra": 0,
+  "incentiveExtra": 0,
+  "miscExtra": 0,
+  "mealCharge": 0,
+  "jstCharge": 0,
+  "bpjsCharge": 0,
+  "fineCharge": 0,
+  "loanCharge": 0,
+  "miscCharge": 0,
+  "bankAccountNumber": "string",
+  "bankAccountName": "string",
+  "nik": "string",
+  "address": "string",
+  "role": "string",
+  "active": true,
+  "branch": "string",
+  "branchId": "string"
+}
+No links
+-------------------------------------------------------------------------------------------------
+
+PUT
+​/api​/employee​/rebranch​/{id}​/{newBranchId}
+Parameters
+Try it out
+Name	Description
+id *
+string($uuid)
+(path)	
+id
+newBranchId *
+string($uuid)
+(path)	
+newBranchId
+Responses
+Code	Description	Links
+200	
+OK
+
+Media type
+
+Controls Accept header.
+Example Value
+Schema
+{
+  "id": "string",
+  "name": "string",
+  "number": "string",
+  "biometricNumber": "string",
+  "title": "string",
+  "workStart": "2020-09-01",
+  "workEnd": "2020-09-01",
+  "workEndReason": "string",
+  "baseSalaryIdx": 0,
+  "baseSalary": 0,
+  "dailySalary": 0,
+  "bpjsSalary": 0,
+  "mealExtra": 0,
+  "titleExtra": 0,
+  "jstExtra": 0,
+  "bpjsExtra": 0,
+  "incentiveExtra": 0,
+  "miscExtra": 0,
+  "mealCharge": 0,
+  "jstCharge": 0,
+  "bpjsCharge": 0,
+  "fineCharge": 0,
+  "loanCharge": 0,
+  "miscCharge": 0,
+  "bankAccountNumber": "string",
+  "bankAccountName": "string",
+  "nik": "string",
+  "address": "string",
+  "role": "string",
+  "active": true,
+  "branch": "string",
+  "branchId": "string"
+}
+No links
+-------------------------------------------------------------------------------------------------
+
+GET
+​/api​/employee​/roles
+Parameters
+Try it out
+No parameters
+
+Responses
+Code	Description	Links
+200	
+OK
+
+Media type
+
+Controls Accept header.
+Example Value
+Schema
+[
+  {
+    "label": "string",
+    "value": "string"
+  }
+]
+No links
+------------------------------------------------------------------------------------------------
+
